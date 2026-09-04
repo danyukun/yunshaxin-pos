@@ -14,18 +14,27 @@ export default function Settings() {
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">门店名称</label>
-              <input type="text" defaultValue="云奢品工厂店"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              <input
+                type="text"
+                defaultValue="云奢品工厂店"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">联系电话</label>
-              <input type="tel" defaultValue="0512-12345678"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              <input
+                type="tel"
+                defaultValue="0512-12345678"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">门店地址</label>
-              <input type="text" defaultValue="江苏省苏州市工业园区"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              <input
+                type="text"
+                defaultValue="江苏省苏州市工业园区"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
           </div>
         </div>
@@ -37,7 +46,7 @@ export default function Settings() {
               <label className="block text-sm font-medium text-gray-700 mb-1">小票宽度</label>
               <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="58">58mm</option>
-                <option value="80">80mm</option>
+                <option value="80" selected>80mm</option>
                 <option value="76">76mm</option>
               </select>
             </div>
@@ -45,13 +54,16 @@ export default function Settings() {
               <label className="block text-sm font-medium text-gray-700 mb-1">编码方式</label>
               <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="qrcode">二维码</option>
-                <option value="barcode">一维条码</option>
+                <option value="barcode" selected>一维条码</option>
               </select>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">注意事项</label>
-              <textarea rows={3} defaultValue="请仔细检查衣物，如有问题请当面提出。"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              <textarea
+                rows={3}
+                defaultValue="请仔细检查衣物，如有问题请当面提出。"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
           </div>
         </div>
@@ -61,18 +73,30 @@ export default function Settings() {
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">默认取衣天数</label>
-              <input type="number" defaultValue="3"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              <input
+                type="number"
+                defaultValue="3"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">默认折扣率</label>
-              <input type="number" defaultValue="100"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              <input
+                type="number"
+                defaultValue="100"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
             <div className="flex items-center gap-2">
-              <input type="checkbox" id="autoSMS" defaultChecked
-                className="size-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-              <label htmlFor="autoSMS" className="text-sm text-gray-700">收衣后自动发送短信通知</label>
+              <input
+                type="checkbox"
+                id="autoSMS"
+                defaultChecked
+                className="size-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <label htmlFor="autoSMS" className="text-sm text-gray-700">
+                收衣后自动发送短信通知
+              </label>
             </div>
           </div>
         </div>
@@ -82,9 +106,15 @@ export default function Settings() {
           <div className="space-y-3">
             {['会员卡', '现金', '微信支付', '支付宝', '美团', '抖音'].map((method) => (
               <div key={method} className="flex items-center gap-2">
-                <input type="checkbox" id={method} defaultChecked
-                  className="size-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-                <label htmlFor={method} className="text-sm text-gray-700">{method}</label>
+                <input
+                  type="checkbox"
+                  id={method}
+                  defaultChecked
+                  className="size-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                />
+                <label htmlFor={method} className="text-sm text-gray-700">
+                  {method}
+                </label>
               </div>
             ))}
           </div>
