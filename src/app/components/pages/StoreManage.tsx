@@ -3,7 +3,7 @@ import {
   Building2, MapPin, Phone, Clock, Users, Plus, Pencil, Trash2,
   ToggleLeft, ToggleRight, X, Check, AlertTriangle, Store,
 } from 'lucide-react';
-import { useAppStore, type Store as StoreType } from '../data/AppContext';
+import { useAppStore, type Store as StoreType } from '../../data/AppContext';
 
 /* ── 门店扩展信息（本地管理，含名称外的字段） ── */
 interface StoreDetail {
