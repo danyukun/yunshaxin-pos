@@ -45,7 +45,7 @@ function GarmentLine({ garment, orderId, orderNo, customerName, isSelected, onTo
           <span className="text-[10px] text-slate-400">{customerName}</span>
         </div>
       </div>
-      <span className="text-sm text-slate-700 flex-shrink-0">￥{garment.price.toFixed(2)}</span>
+      <span className="text-sm text-slate-700 flex-shrink-0">¥{garment.price.toFixed(2)}</span>
     </div>
   );
 }
@@ -61,10 +61,8 @@ function OrderGroup({ order, selectedKeys, onToggle, onToggleAll }: {
 
   return (
     <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
-      <div
-        onClick={() => setOpen(o => !o)}
-        className="flex items-center gap-3 px-4 py-3 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors"
-      >
+      <div onClick={() => setOpen(o => !o)}
+        className="flex items-center gap-3 px-4 py-3 bg-slate-50 cursor-pointer hover:bg-slate-100 transition-colors">
         <div onClick={e => { e.stopPropagation(); onToggleAll(order.id, receivedGarments.map(g => g.id)); }}>
           {allSel
             ? <CheckSquare className="size-4" style={{ color:'#fd780f' }} />
@@ -148,7 +146,6 @@ export default function WashDispatch({ searchQuery = '' }: { searchQuery?: strin
 
   return (
     <div className="-m-4 sm:-m-5 lg:-m-6 flex flex-col" style={{ height: 'calc(100vh - 4rem)' }}>
-
       <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-slate-200 bg-white flex-shrink-0">
         <div>
           <h2 className="text-base text-slate-800">送洗管理</h2>
@@ -205,7 +202,7 @@ export default function WashDispatch({ searchQuery = '' }: { searchQuery?: strin
               </div>
               <div className="flex items-start gap-2 p-3 bg-orange-50 rounded-xl">
                 <AlertTriangle className="size-4 flex-shrink-0 mt-0.5" style={{ color:'#fd780f' }} />
-                <p className="text-xs text-slate-600">共 <strong>{selectedCount}</strong> 件衣物，确认后状态更新为“已送洗”</p>
+                <p className="text-xs text-slate-600">共 <strong>{selectedCount}</strong> 件衣物，确认后状态更新为"已送洗"</p>
               </div>
             </div>
             <div className="px-5 pb-5 flex gap-3">
